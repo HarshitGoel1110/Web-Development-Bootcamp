@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./challenge.css" />
+
+    <title>Challenge</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contact Us</h1>
+    </header>
+
+    <main>
+      <form action="" method="POST">
+        <section>
+          <h2>How can we help you?</h2>
+          <ul>
+            <li>
+              <label for="username">Your name</label>
+              <input
+                type="text"
+                id="username"
+                name="user-name"
+                placeholder="Harshit"
+                required
+              />
+            </li>
+
+            <li>
+              <label for="useremail">Your email</label>
+              <input
+                type="email"
+                id="useremail"
+                name="user-email"
+                placeholder="abc@gmail.com"
+                required
+              />
+            </li>
+
+            <li>
+              <label for="userphone">Your Phone Number</label>
+              <input
+                type="number"
+                id="userphone"
+                name="user-phone"
+                placeholder="1234567890"
+                required
+                minlength="10"
+                maxlength="10"
+              />
+            </li>
+
+            <li>
+              <label for="usermessage">Your message</label>
+              <textarea
+                name="user-message"
+                id="usermessage"
+                rows="10"
+                required
+                placeholder="message"
+              ></textarea>
+            </li>
+
+            <li>
+              <label for="userfindus">How did you find us?</label>
+              <select name="user-findus" id="userfindus">
+                <option value="web">web Search</option>
+                <option value="message">Message</option>
+                <option value="telegram">Telegram</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2>How should we reply?</h2>
+          <ul>
+            <li class="find-us">
+              <input type="radio" name="reply" id="callme" value="call-me" />
+              <label for="callme">Call me</label>
+            </li>
+            <li class="find-us">
+              <input
+                type="radio"
+                name="reply"
+                id="callemail"
+                value="call-email"
+              />
+              <label for="callemail">Call email</label>
+            </li>
+            <li class="find-us">
+              <input
+                type="radio"
+                name="reply"
+                id="calldont"
+                value="call-dont"
+              />
+              <label for="calldont">Don't call me</label>
+            </li>
+          </ul>
+        </section>
+
+        <hr />
+
+        <section>
+          <input
+            type="checkbox"
+            id="useraccept"
+            name="terms"
+            value="accepted"
+          />
+          <label for="useraccept">Accept Terms</label>
+        </section>
+
+        <section class="btn-section">
+          <button type="reset" class="btn">Clear</button>
+          <button type="submit" class="btn">Submit</button>
+        </section>
+      </form>
+    </main>
+  </body>
+</html>
