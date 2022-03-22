@@ -1,23 +1,19 @@
-let userAge = 27;
-let adultYears;
+let paragraphElement = document.querySelector("p");
 
-function calculateAdultAge(){
-  adultYears = userAge - 18;
+function paragraphChange(){
+  paragraphElement.textContent = 'clicked';
 }
 
-calculateAdultAge();
-alert(adultYears);
+paragraphElement.addEventListener('click' , paragraphChange);
 
-userAge = 30;
-calculateAdultAge();
-alert(adultYears);
+let inputElement = document.querySelector('input');
 
-// defining methods
-let person = {
-  name : "Harshit", // property
-  greet(){          // Method
-    alert("Hello everybody");
-  }
+function retrieveUserValue(event){
+  // this "event" object is directly provided by the javascript at the time of calling this object
+  // when we console log this object we can retrieve all the necessary details we want
+  console.log(event);
+  let enteredText = event.target.value;
+  console.log(enteredText);
 }
 
-person.greet();
+inputElement.addEventListener('input' , retrieveUserValue);
