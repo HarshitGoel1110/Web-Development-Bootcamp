@@ -4,107 +4,191 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic-Tac-Toe Game</title>
+    <title>BootStrap</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="./styles/overlays.css" />
-    <link rel="stylesheet" href="./styles/configurations.css" />
-    <link rel="stylesheet" href="./styles/game.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
-    <script src="./scripts/config.js" defer></script>
-    <script src="./scripts/game.js" defer></script>
-    <script src="./scripts/app.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"
+      defer
+    ></script>
+    <script src="./parallex.js"></script>
   </head>
   <body>
-    <div id="backdrop"></div>
-    <header id="main-header">
-      <h1>Play Tic, Tac, Toe</h1>
-      <p>Built with html, css and javascript</p>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./parallex.html">Parallex</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Disabled</a
+                >
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
     </header>
-
     <main>
-      <aside class="modal" id="config-overlay">
-        <!-- In this we are creating our layout for the overlay
-      we can also use div instead of using aside tag, without any issue -->
-        <h2>Choose your name</h2>
+      <div id="carousel-example" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carousel-example"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel-example"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carousel-example"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/berries.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/christmas.jpg" class="d-block w-100" alt="..." />
+          </div>
+          <div class="carousel-item">
+            <img src="./images/tasty.jpg" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carousel-example"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carousel-example"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <section>
         <form>
-          <div class="form-control">
-            <label for="playername">Player Name</label>
-            <input type="text" name="playername" id="playername" required />
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
           </div>
-
-          <p id="config-errors"></p>
-
-          <div>
-            <button type="reset" class="btn btn-alt" id="cancel-config-btn">
-              Cancel
-            </button>
-            <button type="submit" class="btn">Confirm</button>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
           </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Check me out</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
         </form>
-      </aside>
-
-      <section id="game-configuration">
-        <ol>
-          <li>
-            <article id="player-1-data">
-              <h2>Player 1</h2>
-              <h3>Player Name</h3>
-              <p class="player-symbol">X</p>
-              <button
-                class="btn btn-alt"
-                id="edit-player-1-btn"
-                data-playerid="1"
-              >
-                Edit
-              </button>
-            </article>
-          </li>
-          <li>
-            <article id="player-2-data">
-              <h2>Player 2</h2>
-              <h3>Player Name</h3>
-              <p class="player-symbol">O</p>
-              <button
-                class="btn btn-alt"
-                id="edit-player-2-btn"
-                data-playerid="2"
-              >
-                Edit
-              </button>
-            </article>
-          </li>
-        </ol>
-        <button class="btn" id="start-game-btn">Start the Game</button>
-      </section>
-
-      <section id="active-game">
-        <article id="game-over">
-          <h2>You won <span id="winner-name">PLAYER NAME</span></h2>
-          <p>Click on "Start New Game" above, to start a new game</p>
-        </article>
-
-        <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
-        <ol id="game-board">
-          <li data-fieldid="0"></li>
-          <li  data-fieldid="1"></li>
-          <li  data-fieldid="2"></li>
-
-          <li  data-fieldid="3"></li>
-          <li  data-fieldid="4"></li>
-          <li  data-fieldid="5"></li>
-        
-          <li  data-fieldid="6"></li>  
-          <li  data-fieldid="7"></li>
-          <li  data-fieldid="8"></li>
-        </ol>
       </section>
     </main>
   </body>
