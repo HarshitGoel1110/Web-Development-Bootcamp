@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Abc",
+    "address": "Abc",
+    "cuisine": "Classic",
+    "website": "http://localhost:8080",
+    "description": "NA"
+  },
+  {
+    "name": "Abc",
+    "address": "Abc",
+    "cuisine": "Classic",
+    "website": "http://localhost:8080",
+    "description": "NA"
+  },
+  {
+    "name": "Abc",
+    "address": "Abc",
+    "cuisine": "Classic",
+    "website": "http://localhost:8080",
+    "description": "NA"
+  }
+
+]
