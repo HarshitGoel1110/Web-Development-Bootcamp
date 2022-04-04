@@ -1,0 +1,25 @@
+{
+  "name": "@paypalcorp/web-development-bootcamp",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshitGoel1110/Web-Development-Bootcamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarshitGoel1110/Web-Development-Bootcamp/issues"
+  },
+  "homepage": "https://github.com/HarshitGoel1110/Web-Development-Bootcamp#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
