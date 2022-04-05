@@ -2,6 +2,11 @@ const path = require("path");
 const fs = require("fs");
 
 const express = require("express");
+const uuid = require("uuid");
+
+const resData = require("./util/restaurant-data");
+const defaultRoutes = require("./routes/default");
+const restaurantRoutes = require("./routes/restaurant");
 
 const app = express();
 
@@ -12,45 +17,24 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static("public"));
 
-app.get("/", function (req, res) {
-  res.render("index");
-});
+app.use("/" , defaultRoutes);
 
-app.get("/about", function (req, res) {
-  res.render("about");
-});
+app.use("/" , restaurantRoutes);
 
-app.get("/confirm", function (req, res) {
-  res.render("confirm");
-});
+app.use(function(req , res){
+  // if the request doesn't matches to any of the above, then it means that the url is wrong.
+  // So we need to show the 404 page. 
+  // here we are making use of middleware, because many url will fall in this category.
+  res.status(404).render("404");
+})
 
-app.get("/recommend", function (req, res) {
-  res.render("recommend");
-});
-
-app.post("/recommend", function (req, res) {
-  const restaurant = req.body;
-  const filePath = path.join(__dirname, "data", "restaurants.json");
-
-  const fileData = fs.readFileSync(filePath);
-  const storedRestaurants = JSON.parse(fileData);
-  storedRestaurants.push(restaurant);
-
-  fs.writeFileSync(filePath, JSON.stringify(storedRestaurants));
-
-  res.redirect("/confirm");
-});
-
-app.get("/restaurants", function (req, res) {
-  const filePath = path.join(__dirname, "data", "restaurants.json");
-
-  const fileData = fs.readFileSync(filePath);
-  const storedRestaurants = JSON.parse(fileData);
-
-  res.render("restaurants", {
-    numberOfRestaurants: storedRestaurants.length,
-    restaurants: storedRestaurants,
-  });
-});
+// if we want to handle the internal server error, 
+// then we have to make use of middleware, because it can happen in many ways, 
+// and route should accept them all. 
+// in order to specify that this will run for internal server error, we should pass the function
+// with exactly 4 arguments
+app.use(function(error , req , res , next){
+  res.status(500).render("500");
+})
 
 app.listen(3000);
